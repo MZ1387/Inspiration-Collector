@@ -38,7 +38,7 @@
                     <navigationItem key="navigationItem" id="Ps1-mE-zpU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="QT2-2y-9mg">
                             <connections>
-                                <segue destination="7il-NT-uNN" kind="show" id="c8d-JK-Gh7"/>
+                                <segue destination="7il-NT-uNN" kind="show" identifier="inspirationSegue" id="c8d-JK-Gh7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -82,14 +82,24 @@
                                     <action selector="addTapped:" destination="7il-NT-uNN" eventType="touchUpInside" id="Le6-Ts-ySG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlP-x2-Gbb">
+                                <rect key="frame" x="165" y="393" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="7il-NT-uNN" eventType="touchUpInside" id="ES8-AD-NLD"/>
+                                    <action selector="deleteTapped:" destination="7il-NT-uNN" eventType="touchUpInside" id="06C-i0-buL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xLM-5B-EIK" firstAttribute="centerX" secondItem="4Te-ye-xz7" secondAttribute="centerX" id="0wH-P8-5QC"/>
                             <constraint firstItem="RpT-6u-jfI" firstAttribute="centerX" secondItem="4Te-ye-xz7" secondAttribute="centerX" id="CQ9-nc-cqF"/>
                             <constraint firstItem="RpT-6u-jfI" firstAttribute="width" secondItem="xLM-5B-EIK" secondAttribute="width" id="D60-Dv-vnS"/>
+                            <constraint firstItem="KlP-x2-Gbb" firstAttribute="top" secondItem="5r3-ep-ySa" secondAttribute="bottom" constant="5" id="K6z-9d-m8D"/>
                             <constraint firstItem="RpT-6u-jfI" firstAttribute="top" secondItem="xLM-5B-EIK" secondAttribute="bottom" constant="24" id="Krt-0b-E7t"/>
                             <constraint firstItem="xLM-5B-EIK" firstAttribute="top" secondItem="wbI-Wk-LJI" secondAttribute="bottom" constant="20" id="OEx-bN-glT"/>
+                            <constraint firstItem="KlP-x2-Gbb" firstAttribute="centerX" secondItem="4Te-ye-xz7" secondAttribute="centerX" id="a7N-N3-WWX"/>
                             <constraint firstItem="5r3-ep-ySa" firstAttribute="centerX" secondItem="4Te-ye-xz7" secondAttribute="centerX" id="yrg-qG-fDK"/>
                             <constraint firstItem="5r3-ep-ySa" firstAttribute="top" secondItem="RpT-6u-jfI" secondAttribute="bottom" constant="20" id="zt9-Ma-MVL"/>
                         </constraints>
@@ -110,6 +120,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="InspirationImageView" destination="xLM-5B-EIK" id="dlA-j9-Wmb"/>
+                        <outlet property="addUpdateButton" destination="5r3-ep-ySa" id="ink-J2-ceW"/>
+                        <outlet property="deleteButton" destination="KlP-x2-Gbb" id="a8V-02-EdO"/>
                         <outlet property="titleTextField" destination="RpT-6u-jfI" id="PM5-SY-KkL"/>
                     </connections>
                 </viewController>

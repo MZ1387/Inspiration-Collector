@@ -49,6 +49,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let inspiration = inspirations[indexPath.row]
+        performSegue(withIdentifier: "inspirationSegue", sender: inspiration)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! InspirationViewController
+        nextVC.inspiration = sender as? Inspiration
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -16,8 +16,13 @@ class InspirationViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBOutlet weak var titleTextField: UITextField!
     
+    @IBOutlet weak var addUpdateButton: UIButton!
+    
+    @IBOutlet weak var deleteButton: UIButton!
+    
     
     var imagePicker = UIImagePickerController()
+    var inspiration : Inspiration? = nil
     
     
     override func viewDidLoad() {
@@ -27,6 +32,14 @@ class InspirationViewController: UIViewController, UIImagePickerControllerDelega
         
         
         imagePicker.delegate = self
+        
+        if inspiration != nil {
+            InspirationImageView.image = UIImage(data: inspiration!.image as! Data)
+            titleTextField.text = inspiration!.title
+            addUpdateButton.setTitle("Update", for: .normal)
+        } else {
+            deleteButton.isHidden = true
+        }
         
         
     }
@@ -60,12 +73,23 @@ class InspirationViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func addTapped(_ sender: Any) {
         
-    
-       let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        if inspiration != nil {
+            
+            inspiration!.title = titleTextField.text
+            inspiration!.image = UIImagePNGRepresentation(InspirationImageView.image!) as NSData?
+            
+        } else {
+            
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            let inspiration = Inspiration(context: context)
+            inspiration.title = titleTextField.text
+            inspiration.image = UIImagePNGRepresentation(InspirationImageView.image!) as NSData?
+            
+        }
         
-        let inspiration = Inspiration(context: context)
-        inspiration.title = titleTextField.text
-        inspiration.image = UIImagePNGRepresentation(InspirationImageView.image!) as NSData?
+    
+       
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
@@ -74,6 +98,17 @@ class InspirationViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     
+    @IBAction func deleteTapped(_ sender: Any) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        context.delete(inspiration!)
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController!.popViewController(animated: true)
+        
+    }
     
     
     
