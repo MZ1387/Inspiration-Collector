@@ -13,6 +13,8 @@
 		1CCD72991DF79E7F008DC4C5 /* InspirationCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1CCD72971DF79E7F008DC4C5 /* InspirationCollector.xcdatamodeld */; };
 		1CCD729B1DF79E7F008DC4C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CCD729A1DF79E7F008DC4C5 /* Assets.xcassets */; };
 		1CCD729E1DF79E7F008DC4C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CCD729C1DF79E7F008DC4C5 /* LaunchScreen.storyboard */; };
+		1CCD72A61DF7A3C6008DC4C5 /* morning_mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CCD72A51DF7A3C6008DC4C5 /* morning_mountain.jpg */; };
+		1CCD72A81DF7A613008DC4C5 /* InspirationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCD72A71DF7A613008DC4C5 /* InspirationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1CCD729A1DF79E7F008DC4C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CCD729D1DF79E7F008DC4C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CCD729F1DF79E7F008DC4C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CCD72A51DF7A3C6008DC4C5 /* morning_mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = morning_mountain.jpg; sourceTree = "<group>"; };
+		1CCD72A71DF7A613008DC4C5 /* InspirationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 			children = (
 				1CCD72901DF79E7F008DC4C5 /* AppDelegate.swift */,
 				1CCD72921DF79E7F008DC4C5 /* ViewController.swift */,
+				1CCD72A71DF7A613008DC4C5 /* InspirationViewController.swift */,
 				1CCD72941DF79E7F008DC4C5 /* Main.storyboard */,
+				1CCD72A51DF7A3C6008DC4C5 /* morning_mountain.jpg */,
 				1CCD729A1DF79E7F008DC4C5 /* Assets.xcassets */,
 				1CCD729C1DF79E7F008DC4C5 /* LaunchScreen.storyboard */,
 				1CCD729F1DF79E7F008DC4C5 /* Info.plist */,
@@ -126,6 +132,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CCD72A61DF7A3C6008DC4C5 /* morning_mountain.jpg in Resources */,
 				1CCD729E1DF79E7F008DC4C5 /* LaunchScreen.storyboard in Resources */,
 				1CCD729B1DF79E7F008DC4C5 /* Assets.xcassets in Resources */,
 				1CCD72961DF79E7F008DC4C5 /* Main.storyboard in Resources */,
@@ -140,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CCD72991DF79E7F008DC4C5 /* InspirationCollector.xcdatamodeld in Sources */,
+				1CCD72A81DF7A613008DC4C5 /* InspirationViewController.swift in Sources */,
 				1CCD72931DF79E7F008DC4C5 /* ViewController.swift in Sources */,
 				1CCD72911DF79E7F008DC4C5 /* AppDelegate.swift in Sources */,
 			);
